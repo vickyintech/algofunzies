@@ -3,7 +3,6 @@
 
 function mergeAlternately (word1, word2) {
     // Time complexity TIME AND SPACE O(N)
-    // test over here
     let result = ''
     const maxLength = Math.max(word1.length, word2.length)
 

@@ -1,1 +1,1 @@
-# algofunzies
+# Algorithm Practices and play ground
