@@ -2,7 +2,7 @@
 // Leetcode https://leetcode.com/problems/merge-strings-alternately/?envType=study-plan-v2&envId=leetcode-75
 
 function mergeAlternately (word1, word2) {
-    // Time complexity TIME AND SPACE O(N)
+    // TIME AND SPACE O(N)
     let result = ''
     const maxLength = Math.max(word1.length, word2.length)
 

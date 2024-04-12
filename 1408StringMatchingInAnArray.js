@@ -20,5 +20,9 @@ function stringMatching (words) {
 }
 
 function stringMatching (words) {
-    return words.filter(n=> words.some( el=> el !== word && el.includes(word)))
+    return words.filter( n => words.some( el=> el !== word && el.includes(word)))
+}
+
+function stringMatching(words) {
+    
 }
