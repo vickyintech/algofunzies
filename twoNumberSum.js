@@ -15,6 +15,26 @@ function twoNumberSum(array, targetSum) {
     return []
 }
 
+// Variation from Leetcode: https://leetcode.com/problems/two-sum/
+// nums = [3,2,4], target = 6
+// Output: [1,2]
+
+function twoNumberSum(array, targetSum) {
+    let hash = {}
+
+    for (let i = 0; i<nums.length; i ++) {
+        
+        let compareVal = target - nums[i]
+        
+        if(compareVal in hash) {
+            return [hash[compareVal], i]
+        }else {
+            hash[nums[i]] = i
+        }
+    }
+    return []
+}
+
 // Use two pointers 
 function twoNumberSum(array, targetSum) {
     array.sort((a,b) => a-b )
