@@ -22,7 +22,8 @@ while (start < end) {
         let two = s.slice(start+1, end+1)
         return isPalindrome(one) || isPalindrome(two)
     }
-
+    start++ 
+    end --
 }
 
 return true
