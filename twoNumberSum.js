@@ -29,7 +29,7 @@ function twoNumberSum(array, targetSum) {
         if(compareVal in hash) {
             return [hash[compareVal], i]
         }else {
-            hash[nums[i]] = i
+            hash[nums[i]] = i // trick is to store i in hashmap to keep track
         }
     }
     return []
