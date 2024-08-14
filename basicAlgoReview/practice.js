@@ -47,7 +47,26 @@ function reverseInt(n) {
 // 2.  maxChar("apple 1231111") === "1"
 
 function maxChar(s) { 
-    
+    let arr = s.split('')
+    let tracker = {}
+    let maxChar = ''
+    let maxCount = 0
+
+    for (let i = 0; i < arr.length; i++) { 
+        if (tracker[arr[i]] === undefined) {
+            tracker[arr[i]] = 1
+        } else { 
+            tracker[arr[i]] += 1
+        }
+    }
+
+    for (let key in tracker) { 
+        if (tracker[key] > maxCount) { 
+            maxChar = key
+            maxCount = tracker[key]
+        }
+    }
+    return maxChar
 }
 
 
