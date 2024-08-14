@@ -11,6 +11,7 @@ function reverseString(s) {
 // Palindrome
 // 1. palindrome("abba") === true
 // 2. palindrome("abcdefg") === false
+// use two pointers
 
 function isPalindrome(s) { 
     s.replace(/[^a-z0-9]/gi, '').toLowerCase()
@@ -45,6 +46,7 @@ function reverseInt(n) {
 // Max chars 
 // 1.  maxChar("abcccccccd") === "c"
 // 2.  maxChar("apple 1231111") === "1"
+// use hashmap
 
 function maxChar(s) { 
     let arr = s.split('')
@@ -86,3 +88,57 @@ function fizzBuzz(n) {
     }
 }
 
+// Array Chunk
+// Chunk size two:
+//   chunk([1, 2, 3, 4], 2) --> [[ 1, 2], [3, 4]]
+//   
+// Chunk size two:
+//   chunk([1, 2, 3, 4, 5], 2) --> [[ 1, 2], [3, 4], [5]]
+//   
+// Chunk size 3:
+//   chunk([1, 2, 3, 4, 5, 6, 7, 8], 3) --> [[ 1, 2, 3], [4, 5, 6], [7, 8]]
+//   
+//  Chunk size 4:
+//  chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
+//  
+//Chunk size 10:
+//  chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
+
+function chunk(array, size) { 
+    // leverage array.slice(startIndex, endIndex) -> endIndex should not be included
+    let ans = []
+    let index = 0
+    while (index < array.length) { 
+        ans.push(array.slice(index, index + size))
+        index+= size
+    }
+}
+
+//Anagram
+/*
+Examples:
+1. anagrams('rail safety', 'fairy tales') === true
+2. anagrams('RAIL! SAFETY!', 'fairy tales') === true
+3. anagrams('Hi there', 'Bye there') === false
+*/
+
+// Use hashmap to resolve this, runtime o (n)
+
+function anagram(str1, str2) { 
+    let counter1 = {}
+    let counter2 = {}
+    const arr1 = str1.split('').replace(/[^a-z0-9]/gi, '').toLowerCase()
+    const arr2 = str2.split('').replace(/[^a-z0-9]/gi, '').toLowerCase()
+    
+    if (arr1.length !== arr2.length) return false
+
+    for (let i = 0; i < arr1.length; i++) { 
+        counter1[arr1[i]] = 1+ (counter1[arr1[i]] || 0)
+        counter2[arr1[i]] = 1+ (counter2[arr1[i]] || 0)
+    }
+
+    for (let char of counter1) { 
+        if (counter1[char] !== counter2[key]) return false
+    }
+    return true
+}
