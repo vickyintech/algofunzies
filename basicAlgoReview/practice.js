@@ -142,3 +142,21 @@ function anagram(str1, str2) {
     }
     return true
 }
+
+// Capitalization 
+// 1. capitalize('a short sentence') --> 'A Short Sentence'
+// 2. capitalize('a lazy fox') --> 'A Lazy Fox'
+// 3. capitalize('look, it is working!') --> 'Look, It Is Working!'
+
+function capitalize(s) { 
+    let result = s[0].toUpperCase()
+
+    for (let i = 1; i < s.length; i++) { 
+        if (s[i - 1] === ' ') {
+            result += s[i].toUpperCase()
+        } else { 
+            result += s[i]
+        }
+    }
+    return result
+}
