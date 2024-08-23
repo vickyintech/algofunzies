@@ -14,14 +14,23 @@ function maxArea (height) {
 
     while(left < right) {
         let width = right - left
-        let height = Math.min(height[left], height[right])
-        maxArea= Math.max(maxArea, width * height)
-        if(height[left] < height[right]) {
-            left ++
+        let minHeight = Math.min(height[left], height[right])
+        let area = width *  minHeight
+        if (maxArea < area) { 
+            maxArea = area
         }
-        else {
+        // Or we could use Math.max 
+        // maxArea = Math.max(maxArea, width * minHeight)
+        if(height[left] > height[right]) {
+                    right --
+        }else if (height[left] < height[right]){
+            left ++
+        }else {
+            left ++
             right --
         }
+
+        
     }
     return maxArea
 }
