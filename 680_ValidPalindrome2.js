@@ -1,4 +1,4 @@
-// Leetcode: https://www.youtube.com/watch?v=MnKnTbBDhHc
+// Leetcode: https://leetcode.com/problems/valid-palindrome-ii/description/
 
 /*
 Input: s = "aba"

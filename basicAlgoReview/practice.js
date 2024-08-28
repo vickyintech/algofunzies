@@ -160,3 +160,21 @@ function capitalize(s) {
     }
     return result
 }
+
+
+/*
+You are given two strings s1, and t. Return true if they are equal or false otherwise. Assume that you can have a wild card character in s1 denoted by a '.' 
+
+assuming two strings are in the same order?
+
+maybe similar to : https://leetcode.com/problems/is-subsequence/description/?envType=study-plan-v2&envId=leetcode-75
+
+Ex- i) r.kt, rokt returns true 
+
+    ii) r.k, rokt return false
+*/
+
+function validaAnagramWithWildChar(s, t) { 
+   
+    
+}
