@@ -37,7 +37,6 @@ function productExceptSelf (nums) {
 
 // Can I come up with a better solution that is O(1)?
 
-
 function productExceptSelf(nums) { 
     const ans = []
 
