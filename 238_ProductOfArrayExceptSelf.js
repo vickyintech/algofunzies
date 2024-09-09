@@ -37,3 +37,22 @@ function productExceptSelf (nums) {
 
 // Can I come up with a better solution that is O(1)?
 
+
+function productExceptSelf(nums) { 
+    const ans = []
+
+    let prefix = 1
+    let postfix = 1
+
+    for (let i = 0; i < nums.length; i++) { 
+        ans[i] = prefix 
+        prefix = prefix * nums[i]
+    }
+
+    for (let i = nums.length - 2; i >= 0; i--) { 
+        postfix = nums[i] * postfix
+        ans[i] = ans[i] * postfix
+    }
+
+    return ans
+}
