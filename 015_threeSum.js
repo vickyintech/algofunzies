@@ -13,7 +13,7 @@ function threeSum(nums) {
             } else if (sum < 0) {
                 start++
             } else {
-                ans.push([num[i], num[start], num[end]])
+                ans.push([nums[i], nums[start], nums[end]])
                 start++
                 end --
                 while (start < end && nums[start] === nums[start - 1]) { 
