@@ -18,3 +18,5 @@ function findMin(nums) {
     }
     return nums[left]
 }
+
+// Note: While loop needs to set to left < right instead of left <= right because in the condition we are comparing nums[mid] < nums[right]. There might be a edge case when left = right = mid and break the algorithm 
