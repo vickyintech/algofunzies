@@ -11,9 +11,20 @@
 // Time O(n) Space O(n)
 
 function maxDepth (root) {
-    if(root === null) {
-        return 0
-    }else {
-         return 1+ Math.max(maxDepth(root.left), maxDepth(root.right))
+    if(root === null) return 0
+    return 1+ Math.max(maxDepth(root.left), maxDepth(root.right))
+}
+
+// solve it with class 
+
+class TreeNode { 
+    constructor(val, left, right) { 
+        this.val = val
+        this.left = left
+        this.right = right
+    }
+    maxDepth(root) {
+        if (root === null) return 0  
+        return 1+ Math.max(maxDepth(root.right), maxDepth(root.left))
     }
 }
