@@ -18,4 +18,6 @@ function lastStoneWeight(stones) {
         }
     }
     return queue.size() === 1? queue.front().element :0 
+
+    // by default maxqueue.front() returns an objects {priority:5, element:5} 
 }
